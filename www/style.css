@@ -1,0 +1,227 @@
+body {
+    background-color: #101820;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.square {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #00B894, #9B5DE5);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animation1 6s linear infinite;
+}
+
+.square span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #00B894, #9B5DE5);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animation2 4s linear infinite;
+}
+
+.square span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #00B894, #9B5DE5);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animation3 8s linear infinite;
+}
+
+@keyframes animation1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animation3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Chat Input Container */
+#TextInput {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 8px;
+    max-width: 160px;
+    margin: auto;
+}
+
+/* Input Field */
+#chatbox {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+#chatbox::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+.glow-on-hower {
+    background: lightgreen;
+    border: none;
+    padding: 12px 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+}
+
+.glow-on-hower i {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Hover Effect */
+.glow-on-hower:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.9);
+}
+
+/* Chat Button */
+#ChatBtn {
+    background: lightgreen;
+    border: none;
+    padding: 12px 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: lightgreen;
+}
+
+#ChatBtn i {
+    color: #fff;
+    font-size: 20px;
+}
+
+#ChatBtn:hover {
+    transform: scale(1.1);
+    box-shadow: lightgreen;
+}
+
+/* Button Placement */
+#TextInput button {
+    margin-left: 10px;  
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #TextInput {
+        max-width: 90%;
+    }
+}
+
+/* Offcanvas Style */
+.offcanvas {
+    background-color: #111;
+    color: #fff;
+    border-left: 2px solid #0ff;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid white;
+    background-color: white;
+}
+
+.offcanvas-header h5 {
+    font-weight: bold;
+    color:  black;
+}
+
+.offcanvas-body {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+/* Chat Container */
+.chat-canvas{
+    background-color: #191919
+  }
+  
+  .receiver_message{
+    padding: 8px;
+    border: 2px solid cyan;
+    border-radius: 0px 15px 15px 20px;
+    width: auto;
+    color: white;
+    background-color: #0dcaf014;
+  }
+  
+  .sender_message{
+    padding: 8px;
+    border: 1px solid #0045ff;
+    border-radius: 15px 15px 0px 20px;
+    width: auto;
+    color: white;
+    background-color: #0045ff;
+  }
+  .width-size{
+    max-width: 80%;
+    width: auto;
+  }
+
+  #clearChatBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
